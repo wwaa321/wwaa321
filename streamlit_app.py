@@ -15,23 +15,21 @@ with col1:
   st.markdown("***月度统计***  ")
   #饼状图包括未鉴定、鉴定中、已鉴定
 
-  ff=pd.read_excel('file/tongji.xlsx',sheet_name='Sheet1',index_col=[0],na_values=['NA'])
-  #st.dataframe(ff)
-  print(ff.columns)
-  coiumn_name=ff.columns.tolist()
-  print(coiumn_name)
-  print(ff.index.tolist())
-  mon_list=ff.index.tolist()
-  mon=st.selectbox('选择月份',mon_list)
-  if mon==3:
-    row_val=ff.iloc[0].tolist()
-  elif mon==4:
-    row_val=ff.iloc[1].tolist()
-  print(row_val)
+  #ff=pd.read_excel('file/tongji.xlsx',sheet_name='Sheet1',index_col=[0],na_values=['NA'])
+
+ # coiumn_name=ff.columns.tolist()
+
+  #mon_list=ff.index.tolist()
+  #mon=st.selectbox('选择月份',mon_list)
+  #if mon==3:
+  #  row_val=ff.iloc[0].tolist()
+  #elif mon==4:
+  #  row_val=ff.iloc[1].tolist()
+  
 
 
-  fig=px.pie(ff,values=row_val, names=ff.columns,width=350,title='鉴定情况占比')
-  st.plotly_chart(fig)
+  #fig=px.pie(ff,values=row_val, names=ff.columns,width=350,title='鉴定情况占比')
+  #st.plotly_chart(fig)
 
 with col2:
   st.markdown("***年度统计***  ")
