@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">PDF笔记模板生成器</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5459728432511354" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <a href="#" onclick="changeLanguage('en')" data-lang="en">English</a>
+            <a href="#" onclick="changeLanguage('zh_CN')" data-lang="zh_CN">简体中文</a>
+            <a href="#" onclick="changeLanguage('zh_TW')" data-lang="zh_TW">繁體中文</a>
+        </div>
+        <h1 data-i18n="title">PDF笔记模板生成器</h1>
+        <div class="main-content">
+            <div class="preview-section">
+                <h2 data-i18n="preview">预览</h2>
+                <div class="template-preview" id="templatePreview"></div>
+            </div>
+            <div class="control-section">
+                <div class="settings-features-row">
+                    <div class="control-panel">
+                        <div class="control-group">
+                            <label for="template" data-i18n="selectTemplate">选择模板:</label>
+                            <select id="template">
+                                <option value="lines" data-i18n="templates.lines">横线模板</option>
+                                <option value="dots" data-i18n="templates.dots">点阵模板</option>
+                                <option value="cornell" data-i18n="templates.cornell">康奈尔笔记</option>
+                                <option value="grid" data-i18n="templates.grid">方格网格</option>
+                                <option value="bullet" data-i18n="templates.bullet">子弹笔记</option>
+                                <option value="schedule" data-i18n="templates.schedule">日程计划</option>
+                                <option value="meeting" data-i18n="templates.meeting">会议记录</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="pages" data-i18n="pages">页数:</label>
+                            <input type="number" id="pages" min="1" max="100" value="1">
+                        </div>
+                        <button id="generate" data-i18n="generatePDF">生成PDF</button>
+                    </div>
+
+                    <div class="features-section">
+                        <h3 data-i18n="features">功能介绍</h3>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <h4>📝 <span data-i18n="featuresList.multipleTemplates">多样化模板</span></h4>
+                                <p data-i18n="featuresList.multipleTemplatesDesc">提供7种专业模板，满足不同场景需求：笔记、会议、规划等</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>📄 <span data-i18n="featuresList.standardSize">标准A4尺寸</span></h4>
+                                <p data-i18n="featuresList.standardSizeDesc">完美适配A4纸张，支持批量生成多页文档</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>📱 <span data-i18n="featuresList.usage">使用方式</span></h4>
+                                <p data-i18n="featuresList.usageDesc">可下载打印使用，也可导入Goodnotes等笔记软件中使用</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google广告区域 -->
+                <div class="ad-section">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-5459728432511354"
+                         data-ad-slot="4562992930"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
